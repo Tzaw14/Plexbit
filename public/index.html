@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Plexbit - Reproductor con Transcripción</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">P</div>
+        Plexbit
+      </div>
+    </header>
+    
+    <div class="content">
+        <div class="input-section">
+          <div class="input-group">
+            <input type="text" class="url-input" placeholder="URL del video a transcribir (Youtube)">
+          </div>
+          <button class="btn" id="url-btn">Procesar URL</button>
+        </div>
+        
+        <div class="status-indicator hidden" id="status-indicator">
+          <div class="status-text">
+            <span class="status-icon">✓</span>
+            <span id="status-message">Archivo cargado correctamente</span>
+          </div>
+          <button class="btn" id="cancel-btn" style="padding: 5px 10px; font-size: 14px;">Cancelar</button>
+        </div>
+        
+        <div class="transcript-section">
+          <div class="transcript-container">
+            <div class="transcript-header">Transcripción</div>
+            
+            <div class="transcript-content">
+              <p class="highlight" id="placeholder-text">Cargue un archivo de audio/video o introduzca una URL para comenzar la transcripción.</p>
+            </div>
+            
+            <div class="transcript-actions">
+              <button class="btn">Exportar PDF</button>
+              <button class="btn" style="margin-left: auto; background-color: #4caf50;">Copiar texto</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="settings-panel">
+          <div class="settings-title">Configuración de transcripción</div>
+          <div class="settings-options">
+            <div class="settings-option">
+              <select id="text-size" class="btn-orange">
+                <option value="12">Texto pequeño</option>
+                <option value="14" selected>Texto normal</option>
+                <option value="16">Texto grande</option>
+                <option value="18">Texto extra grande</option>
+              </select>           
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
